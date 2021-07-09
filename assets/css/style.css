@@ -1,0 +1,435 @@
+/* Reset CSS */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: Arial, Helvetica, sans-serif;
+    scroll-behavior: smooth;
+}
+
+/* Dùng chung */
+
+.btn {
+    padding: 11px 16px;
+    display: inline-block;
+    margin-top: 15px;
+    background-color: #000;
+    color: #fff;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+}
+
+.pull-right {
+    float: right !important;
+}
+
+.margin-top-8 {
+    margin-top: 8px !important;
+}
+
+.margin-top-16 {
+    margin-top: 16px !important;
+}
+
+.margin-top-32 {
+    margin-top: 32px !important;
+}
+
+.row {
+    margin-left: -8px;
+    margin-right: -8px;
+}
+
+.row::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.col {
+    float: left;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+.col-3 {
+    width: 33.33333%;
+}
+
+.col-2 {
+    width: 50%;
+}
+
+.col-1 {
+    width: 100%;
+}
+
+.text-center {
+    text-align: center !important;
+}
+
+.clear {
+    /* Giải quyết vấn đề float */
+    clear: both;
+}
+
+.text-white {
+    color: #fff !important;
+}
+
+/* ==================================================== */
+#main {
+
+}
+
+#header {
+    height: 46px; 
+    background-color: #000;
+
+    /* Ghim thanh Header */
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    /* Ghim header lên */
+    z-index: 1;
+
+}
+
+#nav {
+    display: inline-block;
+}
+
+#nav, .subnav {
+    list-style-type: none;
+}
+
+#nav > li {
+    display: inline-block;
+}
+
+#nav li {
+    position: relative;
+}
+
+/* Nav cấp 1 */
+#nav > li > a {
+    color: #fff;
+    text-transform: uppercase;
+}
+
+#nav li a {
+    /* Loại bỏ gạch chân */
+    text-decoration: none;
+    /* Cho line-height bằng với width của Header thì sẽ được căn giữa */
+    line-height: 46px;
+    padding: 0 24px;
+    /* Vì thẻ a mặc định là inline không thể set được kích thước, nên chuyển về 
+    inline-block */
+    display: block;
+}
+
+/* Hover vào li để tránh khi di chuột vào More sẽ bị mất hover */
+#nav > li:hover > a,
+#nav .subnav li:hover a {
+    background-color: #ccc;
+    color: #000;
+}
+
+#nav .subnav {
+    /* Bình thường subnav sẽ ẩn */
+    display: none;
+    min-width: 160px;
+    position: absolute;
+    /* Vị trí của subnav */
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+#nav .subnav li a {
+    color: #000;
+    padding: 0 12px;
+    line-height: 38px;
+}
+
+/* Hiển thị subnav */
+#nav li:hover .subnav {
+    display: block;
+}
+
+#nav .nav-arrow-down {
+    font-size: 14px;
+}
+
+#header .mobile-menu-btn { 
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: none;
+}
+
+#header .search-btn, #header .mobile-menu-btn {
+    float: right;
+    padding: 0 21px;
+}
+
+#header .mobile-menu-btn:hover {
+    background-color: #ccc;
+}
+
+#header .mobile-menu-btn:hover .menu-icon {
+    color: #000;
+}
+
+#header .search-btn:hover {
+    background-color: #f44336;
+    cursor: pointer;
+}
+
+#header .search-icon, #header .menu-icon {
+    color: #fff;
+    font-size: 20px;
+    line-height: 46px;
+
+}
+
+#slider {
+    /*  */
+    position: relative;
+    /* Khoảng cách so với Header */
+    margin-top: 46px;
+    /* Tỷ lệ với chiều ngang */
+    padding-top: 50%;
+    width: 100%;
+    background: url(../img/sliders/slider.jpg) top center / cover no-repeat;
+}
+
+#slider .text-content {
+    position: absolute;
+    bottom: 47px;
+    color: #fff;
+
+    /* Căn giữa theo Position */
+    /* left: 50%;
+    transform: translateX(-50%); */
+    
+    /* Cách 2 */
+    /* width: 100%; */
+
+    /* Cách 3 */
+    left: 0;
+    right: 0;
+
+    text-align: center;
+    
+}
+
+#slider .text-heading {
+    font-weight: 500;
+    font-size: 24px;
+}
+
+#slider .text-description {
+    font-size: 15px;
+    padding-top: 25px;
+    text-shadow: 0 0 1px #000;
+}
+
+#content {
+
+}
+
+#content .content-section {
+    width: 800px;
+    max-width: 100%;
+    padding: 64px 0 112px;;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+#content .section-heading {
+    font-size: 30px;
+    text-align: center;
+    font-weight: 500;
+    letter-spacing: 4px;
+}
+
+#content .section-sub-heading {
+    font-size: 15px;
+    text-align: center;
+    margin-top: 25px;
+    font-style: italic;
+    opacity: 0.6;
+}
+
+#content .about-text {
+    font-size: 15px;
+    margin-top: 25px;
+    /* Căn đều chữ 2 bên */
+    text-align: justify;
+    line-height: 1.4;
+}
+
+#content .members-list {
+    margin-top: 32px;
+}
+
+#content .member-name {
+    font-size: 15px;
+}
+
+#content .member-img {
+    margin-top: 15px;
+    /* Đặt witdh rồi k cần đặt height */
+    width: 154px;
+    border-radius: 4px;
+}
+
+.tour-section {
+    background-color: #000;
+}
+
+.tickets-list {
+    background-color: #fff;
+    margin-top: 40px;
+    list-style: none;
+}
+
+.tickets-list li {
+    color: #757575;
+    font-size: 15px;
+    padding: 11px 16px;
+    border-bottom: 1px solid #ddd;
+}
+
+.tickets-list .sold-out {
+    background-color: #f44336;
+    color: #fff;
+    padding: 3px 4px;
+    margin-left: 16px;
+}
+
+.tickets-list .quantity {
+    float: right;
+    width: 24px;
+    height: 24px;
+    background-color: #000;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 24px;
+    color: #fff;
+    margin-top: -3px;
+}
+
+.places-list {
+    margin-top: 16px;
+}
+
+.place-img {
+    width: 100%;
+    /* Tính chất inline do thể img sinh ra */
+    display: block;
+}
+
+.place-img:hover {
+    opacity: 0.6;
+}
+
+.place-body {
+    background-color: #fff;
+    padding: 16px;
+    font-size: 15px;
+}
+
+.place-heading {
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.place-time {
+    padding-top: 15px;   
+    color: #757575; 
+}
+
+.place-dsc {
+    padding-top: 15px;
+    line-height: 1.4;
+}
+
+.btn:hover {
+    background-color: #ccc;
+    color: #000;
+}
+
+.contact-content {
+    margin-top: 47px;
+}
+
+.contact-info {
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+.contact-info a {
+    color: #150fef;
+    opacity: 0.8;
+} 
+.contact-info a:hover {
+    opacity: 2;
+
+}
+
+.contact-info i[class*="ti-"] {
+    width: 30px;
+    display: inline-block;
+}
+
+.contact-form {
+    font-size: 15px;
+}
+
+.contact-form .form-control {
+    padding: 11px;
+    border: 1px solid #ccc;
+    width: 100%;
+}
+
+.map-section img{
+    width: 100%;
+}
+
+#footer {
+    padding: 64px 16px;
+    text-align: center;
+}
+
+#footer .social-list {
+    font-size: 24px
+}
+
+#footer .social-list a {
+    text-decoration: none;
+    color: rgba(0,0,0,0.6);
+}
+
+#footer .social-list a:hover, #footer .copy-right a:hover {
+    color: rgba(0,0,0,0.4);
+}
+
+#footer .copy-right {
+    padding-top: 15px;
+    color: rgba(0,0,0,0.6);
+}
+#footer .copy-right a {
+    color: rgba(0,0,0,0.8);
+}
