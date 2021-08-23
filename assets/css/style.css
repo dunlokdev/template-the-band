@@ -6,10 +6,12 @@
 }
 
 html {
-    font-family: Arial, Helvetica, sans-serif;
     scroll-behavior: smooth;
 }
-
+body {
+    font-family: "Poppins", sans-serif;
+    font-weight: normal;
+}
 /* Dùng chung */
 
 .btn {
@@ -84,11 +86,10 @@ html {
 
 /* ==================================================== */
 #main {
-
 }
 
 #header {
-    height: 46px; 
+    height: 46px;
     background-color: #000;
 
     /* Ghim thanh Header */
@@ -99,14 +100,14 @@ html {
 
     /* Ghim header lên */
     z-index: 1;
-
 }
 
 #nav {
     display: inline-block;
 }
 
-#nav, .subnav {
+#nav,
+.subnav {
     list-style-type: none;
 }
 
@@ -151,7 +152,7 @@ html {
     top: 100%;
     left: 0;
     background-color: #fff;
-    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
 #nav .subnav li a {
@@ -169,14 +170,15 @@ html {
     font-size: 14px;
 }
 
-#header .mobile-menu-btn { 
+#header .mobile-menu-btn {
     position: absolute;
     top: 0;
     right: 0;
     display: none;
 }
 
-#header .search-btn, #header .mobile-menu-btn {
+#header .search-btn,
+#header .mobile-menu-btn {
     float: right;
     padding: 0 21px;
 }
@@ -194,11 +196,11 @@ html {
     cursor: pointer;
 }
 
-#header .search-icon, #header .menu-icon {
+#header .search-icon,
+#header .menu-icon {
     color: #fff;
     font-size: 20px;
     line-height: 46px;
-
 }
 
 #slider {
@@ -207,7 +209,8 @@ html {
     /* Khoảng cách so với Header */
     margin-top: 46px;
     /* Tỷ lệ với chiều ngang */
-    padding-top: 50%;
+    /* padding-top: 50%; */
+    height: 50vw;
     width: 100%;
     background: url(../img/sliders/slider.jpg) top center / cover no-repeat;
 }
@@ -220,7 +223,7 @@ html {
     /* Căn giữa theo Position */
     /* left: 50%;
     transform: translateX(-50%); */
-    
+
     /* Cách 2 */
     /* width: 100%; */
 
@@ -229,7 +232,6 @@ html {
     right: 0;
 
     text-align: center;
-    
 }
 
 #slider .text-heading {
@@ -244,13 +246,12 @@ html {
 }
 
 #content {
-
 }
 
 #content .content-section {
     width: 800px;
     max-width: 100%;
-    padding: 64px 0 112px;;
+    padding: 64px 0 112px;
     margin-left: auto;
     margin-right: auto;
     padding-left: 16px;
@@ -357,8 +358,8 @@ html {
 }
 
 .place-time {
-    padding-top: 15px;   
-    color: #757575; 
+    padding-top: 15px;
+    color: #757575;
 }
 
 .place-dsc {
@@ -383,10 +384,9 @@ html {
 .contact-info a {
     color: #150fef;
     opacity: 0.8;
-} 
+}
 .contact-info a:hover {
     opacity: 2;
-
 }
 
 .contact-info i[class*="ti-"] {
@@ -404,7 +404,7 @@ html {
     width: 100%;
 }
 
-.map-section img{
+.map-section img {
     width: 100%;
 }
 
@@ -414,22 +414,23 @@ html {
 }
 
 #footer .social-list {
-    font-size: 24px
+    font-size: 24px;
 }
 
 #footer .social-list a {
     text-decoration: none;
-    color: rgba(0,0,0,0.6);
+    color: rgba(0, 0, 0, 0.6);
 }
 
-#footer .social-list a:hover, #footer .copy-right a:hover {
-    color: rgba(0,0,0,0.4);
+#footer .social-list a:hover,
+#footer .copy-right a:hover {
+    color: rgba(0, 0, 0, 0.4);
 }
 
 #footer .copy-right {
     padding-top: 15px;
-    color: rgba(0,0,0,0.6);
+    color: rgba(0, 0, 0, 0.6);
 }
 #footer .copy-right a {
-    color: rgba(0,0,0,0.8);
+    color: rgba(0, 0, 0, 0.8);
 }
